@@ -1,0 +1,25 @@
+<form method="POST" action="/user/signin" >
+   <div class="row container-fluid">
+      <div class="col-md-4">
+         <img src="/images/logo_2.png" class="logo">
+      </div>
+      <div class="col-md-4">
+         <h1 class="h1">Signin</h1>
+         <div class="form-group"><input class="form-control" name="name" type="text" placeholder="name"></div>
+         <div class="form-group"><input class="form-control" name="userName" type="text" placeholder="userName"></div>
+         <div class="form-group"><input class="form-control" name="accountNumb" type="number" placeholder="A_Number"></div>
+         <div class="form-group"><input class="form-control" name="password" type="password" placeholder="Password"></div>
+         <div class="form-group"><input class="form-control" name="bankName" type="text" placeholder="Bank Name"></div>
+         <div class="form-group"><input class="form-control" name="branchName" type="text" placeholder="Branch Name"></div>
+         <div class="form-group"><input class="form-control" name="pin" type="password" placeholder="pin /Three digits"></div>
+         
+         <h6 style="color: red;">{{response.message}}</h6>
+         <button class="btn btn-warning btn-md" type="submit">SignIn</button>
+      </div>
+      <div class="col-md-4">
+        <svg></svg>
+        <img src="/images/car_svg.svg" alt="Hello"> 
+
+      </div>
+   </div>
+</form>

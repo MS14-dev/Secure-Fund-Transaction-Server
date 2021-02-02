@@ -1,0 +1,46 @@
+<div class="row container-fluid">
+   <div class="col-md-8">
+      <table>
+         <tr>
+            <h1 style="text-align: center;background:orange">{{user.name}}</h1>
+         </tr><br/>
+         <tr>
+            <td><h2>Account Number</h2></td>
+            <td  style="text-align: center;width:70%"> {{user.accountNumb_User}}</td>
+         </tr><br/>
+         <tr>
+            <td><h3>Bank</h3></td>
+            <td class="table-warning" style="text-align: center;width:70%">{{user.bankName}}</td>
+         </tr>
+         <tr>
+            <td><h4>Branch</h4></td>
+            <td  style="text-align: center;width:70%">{{user.branchName}}</td>
+         </tr>
+         <tr>
+            <td><h4>Amount</h4></td>
+            <td class="table-warning" style="text-align: center;width:70%">{{user.amount}}</td>
+         </tr>
+      </table>
+   </div>
+   <div class="col-md-4">
+      <br/></br/><br/>
+     <h1>Make a Transfer</h1>
+
+     <form method="POST" action="/amount/transfer">
+       <div class="form-group"><input class="form-control" name="accountNumb" value="{{user.accountNumb_User}}" style="display: none;"></div>
+       <div class="form-group"><input class="form-control" name="rec_accountNumb"  type="number" placeholder="Receivers Account"></div>
+       <div class="form-group"><input class="form-control" name="fund_amount" type="number" placeholder="Amount"></div>
+       <button class="btn btn-warning btn-md" type="submit">Transfer</button>
+     </form>
+   </div>
+</div>
+
+
+
+
+
+<h3 style="color: red;">{{response.message}}</h3>
+
+
+
+

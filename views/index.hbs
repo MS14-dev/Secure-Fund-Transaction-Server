@@ -1,0 +1,37 @@
+
+<form method="POST" action="/user/log">
+  <div class="row container-fluid">
+    
+    <div class="col-8 index_div">
+      <div class="index_div_inner" style="padding: 0;margin:0;border:0">
+       <h1 style="text-align:center">New way of <span style="color: orange;">Transfer</span></h1>
+      </div>
+    </div>
+    
+    <div class="col-4">
+      <br/><br/><br/><br/><br/>
+      <h5>Welcome to <h1 style="color: orange;">Pack_Money</h1></h5>
+      <div class="form-group">  
+       <input class="form-control" name="userName" type="text" placeholder="userName">
+      </div>
+  
+      <div class="form-group">  
+       <input class="form-control" name="password" type="password" placeholder="password">
+      </div>
+  
+      <div class="form-group"> 
+       <input class="form-control" name="pin" type="password" placeholder="PIN">
+      </div>
+  
+      <button class="btn btn-warning" type="submit">Login</button>
+      <p style="color: red;">{{invalid_pin.message}}</p>
+      <h1>No account yet,<a href="/user/signin">signin</a></h1>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+<h2 style="color: green;">{{response.message}}</h2>
